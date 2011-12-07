@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+		xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+	<url>
+		<loc>http://www.kailueftner.de/aktuelles</loc>
+		<priority>0.95</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://www.kailueftner.de/zum-lesen</loc>
+		<priority>1.00</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://www.kailueftner.de/zum-hoeren</loc>
+		<priority>1.00</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://www.kailueftner.de/presse</loc>
+		<priority>0.80</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://www.kailueftner.de/links</loc>
+		<priority>0.90</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://www.kailueftner.de/kontakt</loc>
+		<priority>0.50</priority>
+		<changefreq>monthly</changefreq>
+	</url>
+	<url>
+		<loc>http://www.kailueftner.de/impressum</loc>
+		<priority>0.50</priority>
+		<changefreq>monthly</changefreq>
+	</url>
+</urlset>

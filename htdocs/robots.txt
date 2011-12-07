@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /classes/
+Disallow: /cms/
+Disallow: /etc/
+Disallow: /var/
+Disallow: /website/ajax/
+Disallow: /website/css/
+Disallow: /website/js/
+
+Sitemap: /sitemap.xml
