@@ -1,12 +1,12 @@
 <?php
 
 // db credentials
-define('DB_SERVER', "localhost");
-define('DB_USER', "u66137969");
-define('DB_PASS', "foul");
-define('DB_DATABASE', "basilicom_de_call_a_bike_app");
+define('DB_SERVER', "db388049226.db.1and1.com");
+define('DB_USER', "dbo388049226");
+define('DB_PASS', "suessst0ff");
+define('DB_DATABASE', "db388049226");
 
 // tables
-define('TBL_PARTICIPANTS', "participants");
+define('TBL_USER', "betting_user");
 
 ?>
