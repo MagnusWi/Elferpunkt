@@ -23,7 +23,7 @@
 
 		<meta property="og:title" content="<?= ($pageTitle == '') ? $metaMainTitle : $metaMainTitle.' &raquo; '.$pageTitle ?>" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="<?= $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>" />
+		<meta property="og:url" content="http://elferpunkt.de<?= $_SERVER['REQUEST_URI'] ?>" />
 		<meta property="og:image" content="http://elferpunkt.de/website/assets/images/favicon.png" />
 		<meta property="og:site_name" content="<?= $metaMainTitle ?>" />
 		<meta property="og:locale" content="de_DE" />
