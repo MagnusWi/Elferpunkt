@@ -45,10 +45,6 @@
 				src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
 		<script type="text/javascript" language="javascript"
 				src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-		<script type="text/javascript" language="javascript"
-				src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.2/underscore-min.js"></script>
-		<script type="text/javascript" language="javascript"
-				src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.5.3/backbone-min.js"></script>
 
 		<title><?= ($pageTitle == '') ? $metaMainTitle : $metaMainTitle.' &raquo; '.$pageTitle ?></title>
 
