@@ -27,7 +27,7 @@
 		<meta property="og:image" content="" />
 		<meta property="og:site_name" content="<?= $metaAuthor ?>" />
 		<meta property="og:locale" content="de_DE" />
-		<meta property="fb:admins" content="1494736244" />
+		<meta property="fb:app_id" content="283177188364762" />
 
 		<meta name="DC.Creator" content="<?= $metaAuthor ?>" />
 		<meta name="DC.Publisher" content="<?= $metaAuthor ?>" />
@@ -35,8 +35,8 @@
 		<meta name="DC.Description" content="<?= $metaKeywords ?>" />
 		<meta name="DC.Language" content="de" />
 
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/website/assets/images/favicon.png" />
+		<link rel="icon" href="/website/assets/images/favicon.png" />
 
 		<link type="text/css" rel="stylesheet" href="/website/css/reset.css" />
 		<link type="text/css" rel="stylesheet" href="/website/css/style.css" />
