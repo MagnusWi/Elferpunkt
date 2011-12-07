@@ -35,8 +35,8 @@
 		<meta name="DC.Description" content="<?= $metaKeywords ?>" />
 		<meta name="DC.Language" content="de" />
 
-		<link rel="shortcut icon" href="/website/assets/favicon.png" />
-		<link rel="icon" href="/website/assets/favicon.png" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="icon" href="/favicon.ico" />
 
 		<link type="text/css" rel="stylesheet" href="/website/css/reset.css" />
 		<link type="text/css" rel="stylesheet" href="/website/css/style.css" />

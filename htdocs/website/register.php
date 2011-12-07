@@ -2,7 +2,7 @@
 
 <fb:registration
   fields="name,birthday,gender,location,email"
-  redirect-uri="https://developers.facebook.com/tools/echo/"
+  redirect-uri="http://elferpunkt.de/register/complete"
   width="530">
 </fb:registration>
 
