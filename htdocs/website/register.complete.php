@@ -1,7 +1,6 @@
 <?php
 
-define('FACEBOOK_APP_ID', '283177188364762'); // Place your App Id here
-define('FACEBOOK_SECRET', 'fa272e410759f3fb3fe7fb0f80cb860b'); // Place your App Secret Here
+//require_once('./classes/globals.php');
 
 // No need to change the function body
 function parse_signed_request($signed_request, $secret)

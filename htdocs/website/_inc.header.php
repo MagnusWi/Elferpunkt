@@ -54,12 +54,12 @@
 		<script type="text/javascript" language="javascript">
 			window.fbAsyncInit = function() {
 				FB.init({
-					appId	  : '283177188364762', // App ID
-					//channelUrl : '', // Channel File
-					status	 : true, // check login status
-					cookie	 : true, // enable cookies to allow the server to access the session
-					oauth	  : true, // enable OAuth 2.0
-					xfbml	  : true  // parse XFBML
+					appId: '<?= FACEBOOK_APP_ID ?>', // App ID
+					//channelUrl: '', // Channel File
+					status: true, // check login status
+					cookie: true, // enable cookies to allow the server to access the session
+					oauth: true, // enable OAuth 2.0
+					xfbml: true  // parse XFBML
 				});
 
 				// Additional initialization code here
