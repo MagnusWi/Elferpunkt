@@ -1,5 +1,5 @@
 <?php include('_inc.header.php') ?>
 
-<fb:login-button registration-url="https://developers.facebook.com/docs/plugins/registration" />
+<fb:login-button registration-url="http://elferpunkt.de/register" />
 
 <?php include('_inc.footer.php') ?>
