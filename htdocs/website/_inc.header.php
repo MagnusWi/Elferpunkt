@@ -24,7 +24,7 @@
 		<meta property="og:title" content="<?= ($pageTitle == '') ? $metaMainTitle : $metaMainTitle.' &raquo; '.$pageTitle ?>" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://elferpunkt.de" />
-		<meta property="og:image" content="/website/assets/images/favicon.png" />
+		<meta property="og:image" content="http://elferpunkt.de/website/assets/images/favicon.png" />
 		<meta property="og:site_name" content="<?= $metaMainTitle ?>" />
 		<meta property="og:locale" content="de_DE" />
 		<meta property="fb:app_id" content="283177188364762" />
