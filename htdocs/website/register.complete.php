@@ -33,6 +33,11 @@ if ($_REQUEST)
 	$response = parse_signed_request($_REQUEST['signed_request'], FACEBOOK_SECRET);
 
 	/*
+	 *
+	 *
+	 *
+	 *
+	 *
 	$name = $response["registration"]["name"];
 	$email = $response["registration"]["email"];
 	$password = $response["registration"]["password"];
@@ -55,9 +60,51 @@ if ($_REQUEST)
 	}
 	*/
 
+	$dbData = array(
+		'outhToken'	=> $response["oauth_token"],
+		'name' 		=> $response["registration"]["name"],
+		'firstname' => $response["registration"]["first_name"],
+		'lastname' 	=> $response["registration"]["last_name"],
+		'gender'	=> $response["registration"]["gender"],
+		'email'		=> $response["registration"]["email"],
+		'country'	=> $response["user"]["country"],
+		'locale'	=> $response["user"]["locale"],
+		'fbUserId'	=> $response["user_id"]
+	);
+
+	$primaryId = $db->insert(TBL_USER, $dbData);
+
 	// output
 	include('_inc.header.php');
-	var_dump($response);
+
+
+	//var_dump($response);
+
+
+	if($primaryId)
+	{
+		echo($primaryId);
+	}
+	else
+	{
+		echo('no');
+		/*
+		switch($this->db->errno)
+		{
+			case 1062 :
+				throw new Exception("Sie haben bereits teilgenommen!");
+				break;
+
+			default :
+				throw new Exception("A Database error occured! Please try again later.");
+				break;
+		}
+		*/
+	}
+
+
+
+
 	include('_inc.footer.php');
 }
 else
