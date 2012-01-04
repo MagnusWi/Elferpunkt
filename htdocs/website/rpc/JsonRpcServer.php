@@ -93,7 +93,7 @@ catch (Exception $e)
 $response->id = $payload->id;
 
 // Gzip-Kompression aktivieren
-if(!ob_start("ob_gzhandler")) ob_start();
+//if(!ob_start("ob_gzhandler")) ob_start();
 
 // Und unsere JSON-Antwort ausgeben
 echo json_encode($response);

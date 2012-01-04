@@ -45,6 +45,10 @@
 				src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
 		<script type="text/javascript" language="javascript"
 				src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<script type="text/javascript" language="javascript"
+								src="/website/js/JsonRpcClient.js"></script>
+		<script type="text/javascript" language="javascript"
+						src="/website/js/Elferpunkt.js"></script>
 
 		<title><?= ($pageTitle == '') ? $metaMainTitle : $metaMainTitle.' &raquo; '.$pageTitle ?></title>
 
@@ -52,6 +56,7 @@
 	<body>
 		<div id="fb-root"></div>
 		<script type="text/javascript" language="javascript">
+			/*
 			window.fbAsyncInit = function() {
 				FB.init({
 					appId: '<?= FACEBOOK_APP_ID ?>', // App ID
@@ -77,4 +82,5 @@
 				js.src = "//connect.facebook.net/de_DE/all.js";
 				d.getElementsByTagName('head')[0].appendChild(js);
 			}(document));
+			*/
 		</script>

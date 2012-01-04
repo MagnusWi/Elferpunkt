@@ -16,7 +16,7 @@ JsonRpcClient = {
 
 		$.ajax({
 			type: 'POST',
-			url: 'rpc/JsonRpcServer.php',
+			url: '/website/rpc/JsonRpcServer.php',
 			data: payload,
 			dataType: 'json',
 			success: function(response) {

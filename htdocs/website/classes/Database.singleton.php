@@ -57,8 +57,12 @@ class Database{
     private    $query_id = 0;
 
 
-#-#############################################
-# desc: constructor
+/**
+ * @param null $server
+ * @param null $user
+ * @param null $pass
+ * @param null $database
+ */
 private function __construct($server=null, $user=null, $pass=null, $database=null){
     // error catching if not passed in
     if($server==null || $user==null || $database==null){
@@ -69,23 +73,29 @@ private function __construct($server=null, $user=null, $pass=null, $database=nul
     $this->user=$user;
     $this->pass=$pass;
     $this->database=$database;
-}#-#constructor()
+}
 
 
-#-#############################################
-# desc: singleton declaration
+/**
+ * @static
+ * @param null $server
+ * @param null $user
+ * @param null $pass
+ * @param null $database
+ * @return Database
+ */
 public static function obtain($server=null, $user=null, $pass=null, $database=null){
     if (!self::$instance){
         self::$instance = new Database($server, $user, $pass, $database);
     }
 
     return self::$instance;
-}#-#obtain()
+}
 
 
-#-#############################################
-# desc: connect and select database using vars above
-# Param: $new_link can force connect() to open a new link, even if mysql_connect() was called before with the same parameters
+/**
+ * @param bool $new_link
+ */
 public function connect($new_link=false){
     $this->link_id=@mysql_connect($this->server,$this->user,$this->pass,$new_link);
 
@@ -104,33 +114,34 @@ public function connect($new_link=false){
     $this->user='';
     $this->pass='';
     $this->database='';
-}#-#connect()
+}
 
 
 
-#-#############################################
-# desc: close the connection
+/**
+ *
+ */
 public function close(){
     if(!@mysql_close($this->link_id)){
         $this->oops("Connection close failed.");
     }
-}#-#close()
+}
 
 
-#-#############################################
-# Desc: escapes characters to be mysql ready
-# Param: string
-# returns: string
+/**
+ * @param $string
+ * @return string
+ */
 public function escape($string){
     if(get_magic_quotes_runtime()) $string = stripslashes($string);
     return @mysql_real_escape_string($string,$this->link_id);
-}#-#escape()
+}
 
 
-#-#############################################
-# Desc: executes SQL query to an open connection
-# Param: (MySQL query) to execute
-# returns: (query_id) for fetching results etc
+/**
+ * @param $sql
+ * @return int
+ */
 public function query($sql){
     // do query
     $this->query_id = @mysql_query($sql, $this->link_id);
@@ -143,25 +154,25 @@ public function query($sql){
     $this->affected_rows = @mysql_affected_rows($this->link_id);
 
     return $this->query_id;
-}#-#query()
+}
 
 
-#-#############################################
-# desc: does a query, fetches the first row only, frees resultset
-# param: (MySQL query) the query to run on server
-# returns: array of fetched results
+/**
+ * @param $query_string
+ * @return array
+ */
 public function query_first($query_string){
     $query_id = $this->query($query_string);
     $out = $this->fetch($query_id);
     $this->free_result($query_id);
     return $out;
-}#-#query_first()
+}
 
 
-#-#############################################
-# desc: fetches and returns results one line at a time
-# param: query_id for mysql run. if none specified, last used
-# return: (array) fetched record(s)
+/**
+ * @param $query_id
+ * @return array
+ */
 public function fetch($query_id=-1){
     // retrieve row
     if ($query_id!=-1){
@@ -175,13 +186,13 @@ public function fetch($query_id=-1){
     }
 
     return $record;
-}#-#fetch()
+}
 
 
-#-#############################################
-# desc: returns all the results (not one row)
-# param: (MySQL query) the query to run on server
-# returns: assoc array of ALL fetched results
+/**
+ * @param $sql
+ * @return array
+ */
 public function fetch_array($sql){
     $query_id = $this->query($sql);
     $out = array();
@@ -192,13 +203,14 @@ public function fetch_array($sql){
 
     $this->free_result($query_id);
     return $out;
-}#-#fetch_array()
+}
 
-
-#-#############################################
-# desc: does an update query with an array
-# param: table, assoc array with data (not escaped), where condition (optional. if none given, all records updated)
-# returns: (query_id) for fetching results etc
+/**
+ * @param $table
+ * @param $data
+ * @param string $where
+ * @return int
+ */
 public function update($table, $data, $where='1'){
     $q="UPDATE `$table` SET ";
 
@@ -212,13 +224,14 @@ public function update($table, $data, $where='1'){
     $q = rtrim($q, ', ') . ' WHERE '.$where.';';
 
     return $this->query($q);
-}#-#update()
+}
 
 
-#-#############################################
-# desc: does an insert query with an array
-# param: table, assoc array with data (not escaped)
-# returns: id of inserted record, false if error
+/**
+ * @param $table
+ * @param $data
+ * @return bool|int
+ */
 public function insert($table, $data){
     $q="INSERT INTO `$table` ";
     $v=''; $n='';
@@ -237,12 +250,12 @@ public function insert($table, $data){
     }
     else return false;
 
-}#-#insert()
+}
 
 
-#-#############################################
-# desc: frees the resultset
-# param: query_id for mysql run. if none specified, last used
+/**
+ * @param $query_id
+ */
 private function free_result($query_id=-1){
     if ($query_id!=-1){
         $this->query_id=$query_id;
@@ -253,9 +266,10 @@ private function free_result($query_id=-1){
 }#-#free_result()
 
 
-#-#############################################
-# desc: throw an error message
-# param: [optional] any custom error to display
+/**
+ * @param string $msg
+ * @return mixed
+ */
 private function oops($msg=''){
     if(!empty($this->link_id)){
         $this->error = mysql_error($this->link_id);
@@ -279,10 +293,8 @@ private function oops($msg=''){
         <?php if(!empty($_SERVER['HTTP_REFERER'])) echo '<tr><td align="right">Referer:</td><td><a href="'.$_SERVER['HTTP_REFERER'].'">'.$_SERVER['HTTP_REFERER'].'</a></td></tr>'; ?>
         </table>
     <?php
-}#-#oops()
+}
 
 
-}//CLASS Database
-###################################################################################################
-
+}
 ?>

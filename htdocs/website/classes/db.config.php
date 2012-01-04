@@ -1,10 +1,19 @@
 <?php
 
 // db credentials
-define('DB_SERVER', "db394410578.db.1and1.com");
-define('DB_USER', "dbo394410578");
-define('DB_PASS', "betting");
-define('DB_DATABASE', "db394410578");
+
+
+if($_SERVER['HTTP_HOST'] == 'elferpunkt.dev') {
+	define('DB_DATABASE', "elferpunkt");
+	define('DB_SERVER', "localhost");
+	define('DB_USER', "root");
+	define('DB_PASS', "root");
+} else {
+	define('DB_SERVER', "db394410578.db.1and1.com");
+	define('DB_USER', "dbo394410578");
+	define('DB_PASS', "betting");
+	define('DB_DATABASE', "db394410578");
+}
 
 // tables
 define('TBL_CHALLENGE', "betting_challenge");
