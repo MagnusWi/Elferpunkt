@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: db394410578.db.1and1.com
--- Erstellungszeit: 09. Dezember 2011 um 17:09
+-- Erstellungszeit: 04. Januar 2012 um 14:21
 -- Server Version: 5.0.91
 -- PHP-Version: 5.3.3-7+squeeze3
 -- 
@@ -156,6 +156,11 @@ CREATE TABLE `betting_teams` (
   `countryCode` varchar(150) collate utf8_unicode_ci NOT NULL,
   `country` varchar(150) collate utf8_unicode_ci NOT NULL,
   `title` varchar(150) collate utf8_unicode_ci NOT NULL,
+  `gamesPlayed` int(2) NOT NULL default '0',
+  `scoredGoals` int(2) NOT NULL default '0',
+  `concededGoals` int(2) NOT NULL default '0',
+  `goalDifference` int(2) NOT NULL default '0',
+  `points` int(2) NOT NULL default '0',
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=17 ;
 
@@ -163,22 +168,22 @@ CREATE TABLE `betting_teams` (
 -- Daten für Tabelle `betting_teams`
 -- 
 
-INSERT INTO `betting_teams` VALUES (1, 'POL', 'Poland', 'Polen');
-INSERT INTO `betting_teams` VALUES (2, 'GRE', 'Greece', 'Griechenland');
-INSERT INTO `betting_teams` VALUES (3, 'RUS', 'Russia', 'Russland');
-INSERT INTO `betting_teams` VALUES (4, 'CZE', 'Czech Republic', 'Tschechien');
-INSERT INTO `betting_teams` VALUES (5, 'NED', 'Netherlands', 'Niederlande');
-INSERT INTO `betting_teams` VALUES (6, 'DEN', 'Denmark', 'Dänemark');
-INSERT INTO `betting_teams` VALUES (7, 'GER', 'Germany', 'Deutschland');
-INSERT INTO `betting_teams` VALUES (8, 'POR', 'Portugal', 'Portugal');
-INSERT INTO `betting_teams` VALUES (9, 'ESP', 'Spain', 'Spanien');
-INSERT INTO `betting_teams` VALUES (10, 'ITA', 'Italy', 'Italien');
-INSERT INTO `betting_teams` VALUES (11, 'IRL', 'Republic of Ireland', 'Irland');
-INSERT INTO `betting_teams` VALUES (12, 'CRO', 'Croatia', 'Kroatien');
-INSERT INTO `betting_teams` VALUES (13, 'FRA', 'France', 'Frankreich');
-INSERT INTO `betting_teams` VALUES (14, 'ENG', 'England', 'England');
-INSERT INTO `betting_teams` VALUES (15, 'UKR', 'Ukraine', 'Ukraine');
-INSERT INTO `betting_teams` VALUES (16, 'SWE', 'Sweden', 'Schweden');
+INSERT INTO `betting_teams` VALUES (1, 'POL', 'Poland', 'Polen', 0, 0, 0, 0, 0);
+INSERT INTO `betting_teams` VALUES (2, 'GRE', 'Greece', 'Griechenland', 0, 0, 0, 0, 0);
+INSERT INTO `betting_teams` VALUES (3, 'RUS', 'Russia', 'Russland', 0, 0, 0, 0, 0);
+INSERT INTO `betting_teams` VALUES (4, 'CZE', 'Czech Republic', 'Tschechien', 0, 0, 0, 0, 0);
+INSERT INTO `betting_teams` VALUES (5, 'NED', 'Netherlands', 'Niederlande', 0, 0, 0, 0, 0);
+INSERT INTO `betting_teams` VALUES (6, 'DEN', 'Denmark', 'Dänemark', 0, 0, 0, 0, 0);
+INSERT INTO `betting_teams` VALUES (7, 'GER', 'Germany', 'Deutschland', 0, 0, 0, 0, 0);
+INSERT INTO `betting_teams` VALUES (8, 'POR', 'Portugal', 'Portugal', 0, 0, 0, 0, 0);
+INSERT INTO `betting_teams` VALUES (9, 'ESP', 'Spain', 'Spanien', 0, 0, 0, 0, 0);
+INSERT INTO `betting_teams` VALUES (10, 'ITA', 'Italy', 'Italien', 0, 0, 0, 0, 0);
+INSERT INTO `betting_teams` VALUES (11, 'IRL', 'Republic of Ireland', 'Irland', 0, 0, 0, 0, 0);
+INSERT INTO `betting_teams` VALUES (12, 'CRO', 'Croatia', 'Kroatien', 0, 0, 0, 0, 0);
+INSERT INTO `betting_teams` VALUES (13, 'FRA', 'France', 'Frankreich', 0, 0, 0, 0, 0);
+INSERT INTO `betting_teams` VALUES (14, 'ENG', 'England', 'England', 0, 0, 0, 0, 0);
+INSERT INTO `betting_teams` VALUES (15, 'UKR', 'Ukraine', 'Ukraine', 0, 0, 0, 0, 0);
+INSERT INTO `betting_teams` VALUES (16, 'SWE', 'Sweden', 'Schweden', 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 

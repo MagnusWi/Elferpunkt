@@ -4,6 +4,6 @@ startpage
 
 wir deine teser page mit teaser fü das nächste spiel, die ersten 3 platzierten etc.
 
-wir müssen noch ein facebook commentbox einsetzen<
+wir müssen noch ein facebook commentbox einsetzen
 
 <?php include '_inc.footer.php'; ?>
