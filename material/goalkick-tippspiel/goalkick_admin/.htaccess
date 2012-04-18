@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "EM 2008 Tippspiel - "
+AuthUserFile /kunden/stdj.de/hosting/7414/abc-rocks.de/tippspiel/goalkick_admin/.htpasswd01
+require valid-user
